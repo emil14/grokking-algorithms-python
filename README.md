@@ -1,2 +1,4 @@
 # js-algorithms
-Grokking Algorithms in JavaScript
+Grokking algorithms in JavaScript
+
+`Node.js` >= '8.10';
