@@ -1,0 +1,19 @@
+{
+  "name": "js-algorithms",
+  "version": "1.0.0",
+  "description": "Grokking algorithms in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emil14/js-algorithms.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emil14/js-algorithms/issues"
+  },
+  "homepage": "https://github.com/emil14/js-algorithms#readme"
+}
