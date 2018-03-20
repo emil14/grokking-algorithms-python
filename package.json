@@ -4,7 +4,8 @@
   "description": "Grokking algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "start": "node ./src/index.js",
+    "test": "node ./src/tests.js"
   },
   "repository": {
     "type": "git",
