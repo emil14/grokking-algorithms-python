@@ -6,13 +6,13 @@ function binarySearch(input, target) {
     return null
   }
   if (inputLength === 1) {
-    return 0
+    return input[0] === target ? 0 : null
   }
   
   const averageIndex = Math.round(inputLength / 2)
   const averageElement = input[averageIndex]
   
-  if (averageElement === trgt) {
+  if (averageElement === target) {
     return averageIndex;
   }
   
