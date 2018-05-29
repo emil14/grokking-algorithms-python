@@ -1,7 +1,7 @@
 function binarySearch(input, target) {
-  // Base case:
   const inputLength = input.length
   
+  // Base case:
   if (inputLength === 0) {
     return null
   }
