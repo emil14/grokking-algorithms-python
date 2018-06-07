@@ -4,8 +4,9 @@
   "description": "Grokking algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "test": "node ./src/tests.js"
+    "start": "npm run watch",
+    "watch": "nodemon",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/emil14/js-algorithms/issues"
   },
-  "homepage": "https://github.com/emil14/js-algorithms#readme"
+  "homepage": "https://github.com/emil14/js-algorithms#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
+  }
 }
