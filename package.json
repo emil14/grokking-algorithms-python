@@ -1,7 +1,7 @@
 {
-  "name": "js-algorithms",
-  "version": "1.0.0",
-  "description": "Grokking algorithms in JavaScript",
+  "name": "ts-algorithms",
+  "version": "0.1.0",
+  "description": "Grokking algorithms with TypeScript!",
   "main": "index.js",
   "scripts": {
     "start": "npm run watch",
