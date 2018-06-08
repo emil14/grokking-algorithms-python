@@ -1,4 +1,4 @@
-# js-algorithms
-Grokking algorithms in JavaScript
+# ts-algorithms
+Grokking algorithms with TypeScript!
 
 `Node.js` >= '8.10';
