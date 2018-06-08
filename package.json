@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emil14/js-algorithms.git"
+    "url": "git+https://github.com/emil14/ts-algorithms.git"
   },
-  "author": "",
+  "author": "emil14 <emil@musician@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emil14/js-algorithms/issues"
+    "url": "https://github.com/emil14/ts-algorithms/issues"
   },
-  "homepage": "https://github.com/emil14/js-algorithms#readme",
+  "homepage": "https://github.com/emil14/ts-algorithms#readme",
   "devDependencies": {
     "nodemon": "^1.17.5",
     "ts-node": "^6.1.0",
