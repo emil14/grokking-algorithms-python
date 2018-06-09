@@ -4,14 +4,14 @@ const binarySearch = (input: number[], targetValue: number): number | null => {
   if (inputLength === 0) return null
   else if (inputLength === 1) return input[0] === targetValue ? 0 : null
 
-  const middleElementIndex = Math.round(inputLength)
-  const middleElementValue = input[middleElementIndex]
+  const middleItemIndex = Math.round(inputLength / 2)
+  const middleItemValue = input[middleItemIndex]
 
-  if (middleElementValue === targetValue) return middleElementIndex
+  if (middleItemValue === targetValue) return middleItemIndex
   else {
-    const newInput: number[] = middleElementValue > targetValue
-      ? input.slice(0, middleElementIndex)
-      : input.slice(middleElementIndex)
+    const newInput: number[] = middleItemValue > targetValue
+      ? input.slice(0, middleItemIndex)
+      : input.slice(middleItemIndex)
     return binarySearch(newInput, targetValue)
   }
 }
