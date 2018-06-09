@@ -1,2 +1,6 @@
 import sortedNumList from './data'
-console.log(sortedNumList);
+import binarySearch from './binarySearch'
+
+console.log({
+  sortedNumList: binarySearch(sortedNumList, 42)
+});
