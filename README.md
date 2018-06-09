@@ -1,4 +1,4 @@
 # ts-algorithms
-Grokking algorithms with TypeScript!
+Grokking algorithms with `TypeScript`!
 
-`Node.js` >= '8.10';
+The repository is inspired by the wonderful "_Grokking Algorithms. An illustrated guide for programmers and other curious people_" book by [Aditya Y. Bhargava](https://github.com/egonSchiele).
