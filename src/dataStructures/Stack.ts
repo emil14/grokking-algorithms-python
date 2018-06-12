@@ -1,5 +1,5 @@
 type Stack = {
-  push: (item: any) => number,
+  push: (record: any) => number,
   pop: () => any,
   peek: () => any,
   getLength: () => number,

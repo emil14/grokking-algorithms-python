@@ -11,7 +11,7 @@ const Queue = (): Queue => {
 
   return {
     enqueue: record => data.unshift(record),
-    dequeue: () => data.pop(),
+    dequeue: () => data.pop() || null,
     peek: () => data[data.length - 1] || null,
     getLength: () => data.length,
     isEmpty: () => data.length === 0
