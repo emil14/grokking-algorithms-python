@@ -1,5 +1,5 @@
 type Queue = {
-  enqueue: (item: any) => number,
+  enqueue: (record: any) => number,
   dequeue: () => any,
   peek: () => any,
   getLength: () => number,
@@ -10,8 +10,8 @@ const Queue = (): Queue => {
   const data: Array<any> = []
 
   return {
-    enqueue: item => data.push(item),
-    dequeue: () => data.shift(),
+    enqueue: record => data.unshift(record),
+    dequeue: () => data.pop(),
     peek: () => data[data.length - 1] || null,
     getLength: () => data.length,
     isEmpty: () => data.length === 0
