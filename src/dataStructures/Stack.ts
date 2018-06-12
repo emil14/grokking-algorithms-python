@@ -11,8 +11,8 @@ const Stack = (): Stack => {
 
   return {
     push: record => data.push(record),
-    pop: () => data.pop() || null,
-    peek: () => data[data.length - 1] || null,
+    pop: () => data.pop(),
+    peek: () => data[data.length - 1],
     getLength: () => data.length,
     isEmpty: () => data.length === 0
   }
