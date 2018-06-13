@@ -1,17 +1,17 @@
 type Node = { data: any, next: Node | null }
 type Link = Node | null
-type LinkedList = { head: Link, tail: Link }
+type LinkedList = { insert: (item: any) => void }
 
 const Node = (data: any, next = null): Node => ({ data, next })
 
-const LinkedList = () => {
-  const data: Node[] = []
+const LinkedList = (): LinkedList => {
   let head: any = null
-  let tail = null
 
   return {
-    addToHead: (value: any) => {
-      const node = Node(value, head)
+    insert: item => {
+      const node = Node(item)
+      if (head !== null) node.next = head
+      head = node
     }
   }
 }

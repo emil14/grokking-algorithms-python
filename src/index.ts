@@ -1,8 +1,8 @@
 import { sortedNumList, unsortedNumList } from './data'
 
-import simpleSearch from './simpleSearch'
-import binarySearch from './binarySearch'
-import quickSort from './quickSort'
+import simpleSearch from './algorithms/simpleSearch'
+import binarySearch from './algorithms/binarySearch'
+import quickSort from './algorithms/quickSort'
 
 console.log({
   binarySearch: binarySearch(sortedNumList, 4),
