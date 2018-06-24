@@ -3,7 +3,7 @@ type HashTable = {
   read: (key: string) => any
 }
 
-const hashFunction = (key: string): number => key.length // FIXME: bad hashFunc
+const hashFunction = (str: string): number => str.split().reduce((acc, char) => acc + char.charCodeAt(0), 0)
 
 const HashTable = (): HashTable => {
   const data: any[] = []
