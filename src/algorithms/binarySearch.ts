@@ -1,19 +1,26 @@
-const binarySearch = (
-  input: number[], targetValue: number, lowIndex: number = 0, hightIndex: number = input.length
-): number | null => {
-  if (input.length === 0) return null
-  else if (input.length === 1) return input[0] === targetValue ? 0 : null
-
-  const middleItemIndex = Math.round((lowIndex + hightIndex) / 2)
-  const middleItemValue = input[middleItemIndex]
-
-  if (middleItemValue === targetValue) return middleItemIndex
-  else {
-    const newLowIndex = targetValue > middleItemValue ? middleItemIndex : 0
-    const newHightIndex = targetValue > middleItemValue ? hightIndex : middleItemIndex
-
-    return binarySearch(input, targetValue, newLowIndex, newHightIndex)
+function binarySearch(
+  input: string[],
+  target: string,
+  low: number = 0,
+  hight: number = input.length
+): number | null {
+  if (input.length === 0) {
+    return null;
+  } else if (input.length === 1) {
+    return input[0] === target ? 0 : null;
   }
+
+  const averageIndex = Math.round((low + hight) / 2);
+  const averageValue = input[averageIndex];
+
+  if (averageValue === target) {
+    return averageIndex;
+  }
+
+  const newLow = (target > averageValue) ? averageIndex : 0
+  const newHight = (target > averageValue) ? hight : averageIndex
+
+  return binarySearch(input, target, newLow, newHight)
 }
 
 export default binarySearch

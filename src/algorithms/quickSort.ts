@@ -1,25 +1,25 @@
-const quickSort = (input: number[]): number[] => {
-  const inputLength = input.length
-
-  if (inputLength < 2) {
-    return input
+function quickSort(input: string[]): string[] {
+  if (input.length < 2) {
+    return input;
   }
 
-  const pivot = input[Math.round(input.length / 2)]
-  const less = []
-  const greater = []
+  const pivot: string = input[Math.round(input.length / 2)];
+  const less: string[] = [];
+  const greater: string[] = [];
 
-  for (let i = 0; i < inputLength - 1; i++) {
-    const currentElement = input[i]
+  for (let i: number = 0; i < input.length; i++) {
+    const current: string = input[i];
 
-    if (currentElement < pivot) less.push(currentElement)
-    else greater.push(currentElement)
+    if (current !== pivot) {
+      ((current < pivot) ? less : greater).push(current);
+    }
   }
 
   return [
     ...quickSort(less),
+    pivot,
     ...quickSort(greater)
-  ]
+  ];
 }
 
-export default quickSort
+export default quickSort;
