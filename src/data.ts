@@ -1,2 +1,19 @@
-export const sortedNumList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-export const unsortedNumList = [2, 0, 1, 5, 3, 4, 9, 7, 8, 10, 6]
+export const sortedNames = [
+  'AC/DC',
+  'Bob Dylan',
+  'Deep Purple',
+  'Freddie Mercury',
+  'George Harrison',
+  'Led Zeppelin',
+  'Nirvana',
+];
+
+export const unsortedNames = [
+  'Deep Purple',
+  'AC/DC',
+  'Bob Dylan',
+  'Led Zeppelin',
+  'Freddie Mercury',
+  'Nirvana',
+  'George Harrison',
+];
