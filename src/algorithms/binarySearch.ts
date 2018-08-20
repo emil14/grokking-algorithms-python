@@ -17,10 +17,9 @@ function binarySearch(
     return averageIndex;
   }
 
-  const newLow = (target > averageValue) ? averageIndex : 0
-  const newHight = (target > averageValue) ? hight : averageIndex
+  const newBorders = target > averageValue ? [averageIndex, hight] : [0, averageIndex];
 
-  return binarySearch(input, target, newLow, newHight)
+  return binarySearch(input, target, ...newBorders)
 }
 
 export default binarySearch
