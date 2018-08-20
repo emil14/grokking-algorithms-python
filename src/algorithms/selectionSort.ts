@@ -1,10 +1,15 @@
-const findSmallest = (
-  input: number[], start: number = 0, lastSmallestIndex: number = 0
-): number => {
-  if (start === input.length - 1) return lastSmallestIndex
+function findSmallest(
+  input: number[], start: number = 0, lastSmallest: number = 0
+): number {
+  if (start === input.length - 1) {
+    return lastSmallest;
+  }
 
-  const newSmallestIndex = input[start] < input[lastSmallestIndex] ? start : lastSmallestIndex
-  return findSmallest(input, start + 1, newSmallestIndex)
+  return findSmallest(
+    input,
+    start + 1,
+    (input[start] < input[lastSmallest]) ? start : lastSmallest
+  )
 }
 
 // const selectionSort = (input: number[], start: number = 0): number[] => {
