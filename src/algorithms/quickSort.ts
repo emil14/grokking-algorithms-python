@@ -9,7 +9,10 @@ function quickSort(input: string[]): string[] {
 
   for (let i: number = 0; i < input.length; i++) {
     const current: string = input[i];
-    (current !== pivot) && ((current < pivot) ? less : greater).push(current);
+
+    if (current !== pivot) {
+      (current < pivot ? less : greater).push(current);
+    }
   }
 
   return [
