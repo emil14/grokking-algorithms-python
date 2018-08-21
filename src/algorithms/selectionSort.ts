@@ -1,30 +1,27 @@
-function findSmallest(
-  input: string[],
-  start: number = 0,
-  lastSmallest: number = 0
-): number {
-  if (start === input.length - 1) {
-    return lastSmallest;
-  }
+function swap(input: string[], i: number, j: number): string[] {
+  const output: string[] = [...input];
 
-  return findSmallest(
-    input,
-    start + 1,
-    input[start] < input[lastSmallest] ? start : lastSmallest
-  );
+  output[i] = input[j];
+  output[j] = input[i];
+
+  return output;
 }
 
 function selectionSort(input: string[], start: number = 0): string[] {
-  const result: string[] = [...input];
+  let result: string[] = [...input];
 
-  for (let i: number = 0; i < result.length; i++) {
-    const current = result[i];
-    const smallestIndex = findSmallest(result);
-    const smallestValue = result[smallestIndex];
+  for (let i: number = 0; i < input.length; i++) {
+    let smallest = i;
 
-    if (current !== smallestValue) {
-      result[smallestIndex] = current;
-      result[i] = smallestValue;
+    for (let j: number = i + 1; j < input.length; j++) {
+      if (input[j] < input[smallest]) {
+        smallest = j;
+      }
+    }
+
+
+    if (input[i] < input[smallest]) {
+      result = swap(input, i, smallest);
     }
   }
 
