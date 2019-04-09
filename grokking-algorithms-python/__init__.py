@@ -1,5 +1,6 @@
 from binary_search import binary_search
 from selection_sort import selection_sort
+from stack import Stack
 
 data = [
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
@@ -7,6 +8,13 @@ data = [
 
 print(binary_search(data, 37, 0, 24))
 print(selection_sort([5, 3, 6, 2, 10]))  # 2,3,5,6,10
+
+s = Stack()
+print(s)
+s.push(42)
+print(s)
+s.pop()
+print(s)
 
 # binary_search(): O(log(n)), work only with sorted data
 # array: O(1) reading, O(n) adding/removing
