@@ -4,5 +4,4 @@ def binary_search(input, value, low, high):
         return mid
     if input[mid] < value:
         return binary_search(input, value, mid + 1, high)
-    elif input[mid] > value:
-        return binary_search(input, value, low, mid - 1)
+    return binary_search(input, value, low, mid - 1)
