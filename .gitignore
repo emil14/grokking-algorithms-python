@@ -1,3 +1,4 @@
 .mypy-cache
 grokking-algorithms-python/*.pyc
 grokking-algorithms-python/__pycache__
+.vscode
