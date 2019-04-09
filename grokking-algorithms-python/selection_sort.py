@@ -1,3 +1,6 @@
+# Chapter 2 | Selection sort
+
+
 def find_min(input):
     min = 0
     for idx, el in enumerate(input):

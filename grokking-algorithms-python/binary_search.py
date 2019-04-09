@@ -1,3 +1,6 @@
+# Chapter 1 | Introduction to algorithms
+
+
 def binary_search(input, value, low, high):
     mid = round((low + high) / 2)
     if input[mid] == value:
