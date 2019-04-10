@@ -23,9 +23,7 @@ class HashTable:
     def set(self, key, val):
         idx = self.__hash(key)
         pair = (key, val)
-        if (len(self.__data) >= idx):
+        try:
             self.__data[idx].append(pair)
-        else:
-            self.__data[idx] = [pair]
-
-
+        except IndexError:
+            self.__data.insert(idx, pair)
