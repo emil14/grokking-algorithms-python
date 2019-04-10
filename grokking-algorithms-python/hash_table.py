@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 class HashTable:
     def __init__(self, size=23):
         self.__data = []
@@ -8,16 +9,20 @@ class HashTable:
     def __repr__(self):
         return f'<HashTable {self.__data}>'
 
-    def __hash(key):
-        return reduce(lambda x, y: ord(x) + ord(y), 0) % self.__size
+    def __hash(self, key):
+        unicode_sum = reduce(lambda x, y: ord(x) + ord(y), 0)
+        return unicode_sum % self.__size
 
     def get(self, key):
         idx = self.__hash(key)
-        return next(pair_value for (pair_key, pair_value) in self.__data[idx] if pair_key == key, None)
+        for pair_key, pair_val in self.__data[idx]:
+            if pair_key == key:
+                return pair_val
+        return None
 
-    def set(self, key, value):
+    def set(self, key, val):
         idx = self.__hash(key)
-        pair = (key, value)
+        pair = (key, val)
         if (len(self.__data) >= idx):
             self.__data[idx].append(pair)
         else:
