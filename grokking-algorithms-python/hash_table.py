@@ -10,7 +10,7 @@ class HashTable:
         return f'<HashTable {self.__data}>'
 
     def __hash(self, key):
-        unicode_sum = reduce(lambda x, y: ord(x) + ord(y), 0)
+        unicode_sum = reduce(lambda x, y: ord(x) + ord(y), key, 0)
         return unicode_sum % self.__size
 
     def get(self, key):
