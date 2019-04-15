@@ -11,9 +11,8 @@ g = {
 }
 
 def bfs(start_node, goal_node, graph):
-    queue = deque()
-    queue += graph[start_node]
-    visited = []
+    queue = deque(graph[start_node])
+    visited = [start_node]
     while queue:
         cur = queue.popleft()
         if cur not in visited:
