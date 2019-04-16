@@ -1,5 +1,5 @@
 from string import ascii_lowercase
-from functools import reduce
+
 
 class HashTable:
     def __init__(self, size=23):
@@ -29,4 +29,3 @@ class HashTable:
             self.__data[idx].append(pair)
         else:
             self.__data.insert(idx, [pair])
-
