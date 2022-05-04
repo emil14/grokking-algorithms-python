@@ -6,7 +6,7 @@ def _partition(input, pivot):
     for el in input:
         if el < input[pivot]:
             left.append(el)
-        elif el > input[pivot]:
+        elif el > input[pivot]: # == ?
             right.append(el)
     return left, right
 
