@@ -11,7 +11,7 @@ def _partition(input, pivot):
     return left, right
 
 def qsort(input):
-    if len(input) < 2:
+    if len(input) < 2: # if [4,2]?
         return input
     pivot = round(len(input) / 2)
     left, right = _partition(input, pivot)
